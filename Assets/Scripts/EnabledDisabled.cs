@@ -7,7 +7,9 @@ public class EnabledDissabled : MonoBehaviour
 
     public GameObject go; 
     public SpriteRenderer sr;
-    public EnabledDissabled script; 
+    public EnabledDissabled script;
+    public AudioSource audioSource;
+    public AudioClip clip; 
 
     // Update is called once per frame
     void Update()
@@ -17,7 +19,7 @@ public class EnabledDissabled : MonoBehaviour
         {
 
             //sr.enabled = false;
-            script.enabled = false;
+            //script.enabled = false;
             go.SetActive(false);
 
         }
@@ -26,8 +28,20 @@ public class EnabledDissabled : MonoBehaviour
         {
 
             //sr.enabled = true; 
-            script.enabled = true;
+            //script.enabled = true;
             go.SetActive(true);
+
+        }
+
+        if (Input.GetKey(KeyCode.Space))
+        {
+
+            //audioSource.Play();
+            if (audioSource.isPlaying == false)
+            {
+                audioSource.PlayOneShot(clip);
+
+            }
 
         }
         
