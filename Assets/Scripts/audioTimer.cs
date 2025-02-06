@@ -17,7 +17,7 @@ public class audioSlider : MonoBehaviour
 
         slider = GetComponent<Slider>();
         audioSource = audioPlayer.GetComponent<AudioSource>();
-        clip = audioSource.clip;
+        clip = audioSource.clip; 
 
     }
 
@@ -32,6 +32,7 @@ public class audioSlider : MonoBehaviour
     void Update()
     {
 
+        clip = audioSource.clip; 
         slider.maxValue = clip.length; 
         slider.value = audioSource.time % slider.maxValue; 
 

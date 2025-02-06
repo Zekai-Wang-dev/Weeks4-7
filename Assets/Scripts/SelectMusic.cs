@@ -10,6 +10,7 @@ public class SelectMusic : MonoBehaviour
     public TMP_Dropdown dropdown;
     public AudioSource audioSource;
     public List<AudioClip> clips;
+    public Slider slider; 
 
     private void Awake()
     {
