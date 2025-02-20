@@ -11,10 +11,20 @@ public class SpawnEnemy : MonoBehaviour
     public List<GameObject> spawnedEnemies;
     public List<clickOnEnemy> enemyScript;
 
+    public GameObject weaponDropDown;
+    public SelectWeapon selectWeapon;
+
+    public bool swordWeak;
+    public bool bowWeak;
+    public bool wandWeak; 
 
     private void Awake()
     {
 
+        swordWeak = false;
+        bowWeak = false;
+        wandWeak = false; 
+        selectWeapon = weaponDropDown.GetComponent<SelectWeapon>();
         
     }
 
